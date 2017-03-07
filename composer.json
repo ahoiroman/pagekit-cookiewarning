@@ -1,0 +1,18 @@
+{
+  "name": "spqr/cookiewarning",
+  "type": "pagekit-extension",
+  "version": "1.0.0",
+  "title": "Cookie Warning",
+  "description": "Displays a Cookie-warning",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roman Lossin-Beßler",
+      "homepage": "https://spqr.wtf"
+    }
+  ],
+  "extra": {
+    "icon": "icon.svg",
+    "scripts": "scripts.php"
+  }
+}
