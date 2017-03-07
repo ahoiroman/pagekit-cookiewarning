@@ -82,7 +82,7 @@ return [
 							'This website uses cookies. This ensures that the website is working correctly for your best experience on this website.'
 						) );
 					$dismiss                =
-						( !empty( $config[ 'dismissbuttontext' ] ) ? $config[ 'dismiss' ] : __( 'Dismiss' ) );
+						( !empty( $config[ 'dismissbuttontext' ] ) ? $config[ 'dismissbuttontext' ] : __( 'Dismiss' ) );
 					$policytext             =
 						( !empty( $config[ 'policytext' ] ) ? $config[ 'policytext' ] : __( 'Learn more' ) );
 					$buttontextcolour       =
