@@ -1,7 +1,10 @@
 # Changelog
 
+## 1.0.2
+- ADD: New icon
+
 ## 1.0.1
--Smaller bugfixes
+-FIX: Smaller bugfixes
 
 ## 1.0.0
-- Initial release
+- ADD: Initial release
