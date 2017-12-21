@@ -1,5 +1,5 @@
 {
-  "name": "cookiewarning",
+  "name": "spqr/cookiewarning",
   "dependencies": {
     "cookieconsent": "*"
   },
