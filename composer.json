@@ -1,7 +1,8 @@
 {
   "name": "spqr/cookiewarning",
+  "module": "spqr/cookiewarning",
   "type": "pagekit-extension",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "title": "Cookie Warning",
   "description": "Displays a Cookie-warning",
   "license": "MIT",
