@@ -103,9 +103,9 @@ return [
 								})});";
                 
                 $app['styles']->add('cookieconsent',
-                    'spqr/cookiewarning:app/assets/cookieconsent/build/cookieconsent.min.css');
+                    'spqr/cookiewarning:app/assets/cookieconsent/cookieconsent.min.css');
                 $app['scripts']->add('cookieconsent',
-                    'spqr/cookiewarning:app/assets/cookieconsent/build/cookieconsent.min.js');
+                    'spqr/cookiewarning:app/assets/cookieconsent/cookieconsent.min.js');
                 $app['scripts']->add('cookiewarning', $script, [], 'string');
             });
         },
