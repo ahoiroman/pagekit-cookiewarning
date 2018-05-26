@@ -13,6 +13,8 @@
 	'Popup-Text-Colour'                                                                                                       => 'Popup-Textfarbe',
 	'Button-Background-Colour'                                                                                                => 'Button-Hintergrundfarbe',
 	'Button-Text-Colour'                                                                                                      => 'Button-Textfarbe',
+	'Highlight-Background-Colour'                                                                                             => 'Highlight-Hintergrundfarbe',
+	'Highlight-Text-Colour'                                                                                                   => 'Highlight-Textfarbe',
 	'Message'                                                                                                                 => 'Nachricht',
 	'Overwrite message'                                                                                                       => 'Text des Nutzerhinweises überschreiben',
 	'Overwrite dismiss-button'                                                                                                => 'Text des Ausblenden-Buttons überschreiben',

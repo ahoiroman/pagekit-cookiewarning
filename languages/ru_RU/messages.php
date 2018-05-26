@@ -13,6 +13,8 @@
 	'Popup-Text-Colour'                                                                                                       => 'Цвет текста сообщения',
 	'Button-Background-Colour'                                                                                                => 'Фоновый цвет кнопки',
 	'Button-Text-Colour'                                                                                                      => 'Цвет текста кнопки',
+	'Highlight-Background-Colour'                                                                                             => 'Фоновый цвет основной кнопки',
+	'Highlight-Text-Colour'                                                                                                   => 'Цвет текста основной кнопки',
 	'Message'                                                                                                                 => 'Сообщение',
 	'Overwrite message'                                                                                                       => 'Изменить текст сообщения',
 	'Overwrite dismiss-button'                                                                                                => 'Изменить текст кнопки закрытия',
