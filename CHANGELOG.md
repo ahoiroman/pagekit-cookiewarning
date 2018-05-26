@@ -1,4 +1,7 @@
 # Changelog
+## 1.0.5
+- ADD: Opt-in and opt-out possibility to accept oder decline cookieconsent
+- ADD: Highlight Button text and background colour; This styles the second optional button
 
 ## 1.0.4
 - ADD: Replaced bower with npm/webpack
