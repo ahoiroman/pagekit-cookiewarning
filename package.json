@@ -4,8 +4,9 @@
     "archive": "webpack -p && composer archive --format=zip"
   },
   "dependencies": {
-    "cookieconsent": "*",
-    "copy-webpack-plugin": "^4.0.1"
+    "cookieconsent": "^3.0.6",
+    "copy-webpack-plugin": "^4.5.1",
+    "eslint": "^4.19.1"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -20,5 +21,18 @@
     "vue-style-loader": "^1.0.0",
     "css-loader": "*",
     "webpack": "^1.12.9"
-  }
+  },
+  "description": "This extension allows the user to show a cookie-warning (see EU Cookie Law) on the frontpage. This extension makes use of the great cookieconsent-sources.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fosphatic/pagekit-cookiewarning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fosphatic/pagekit-cookiewarning/issues"
+  },
+  "homepage": "https://github.com/Fosphatic/pagekit-cookiewarning#readme"
 }
