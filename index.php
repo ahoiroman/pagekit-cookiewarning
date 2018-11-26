@@ -95,8 +95,8 @@ return [
 	                                'theme': '$theme',
                                     'position': '$position',
                                     'content': {
-                                        'message': '$message',
-                                        'dismiss': '$dismiss',
+                                        'message': \"$message\",
+                                        'dismiss': \"$dismiss\",
                                         'link': '$policytext',
                                         'href': '$url'                                                                                
                                     }
