@@ -3,37 +3,40 @@
 use Pagekit\Application as App;
 
 return [
-    
+
     'name' => 'spqr/cookiewarning',
-    
+
     'type' => 'extension',
-    
+
     'main' => function ($app) {
     },
-    
+
     'autoload' => [
     ],
-    
+
     'nodes' => [],
-    
+
     'routes' => [],
-    
+
     'menu' => [],
-    
+
     'permissions' => [],
-    
+
     'settings' => 'cookiewarning-settings',
-    
+
     'resources' => [
         'spqr/cookiewarning:' => '',
     ],
-    
+
     'config' => [
         'url'               => '',
         'position'          => 'bottom',
         'theme'             => 'classic',
+        'type'             => 'info',
         'message'           => '',
         'dismissbuttontext' => '',
+        'denybuttontext' => '',
+        'allowbuttontext' => '',
         'policytext'        => '',
         'popup'             => [
             'textcolour'       => '#404040',
@@ -43,25 +46,35 @@ return [
             'textcolour'       => '#ffffff',
             'backgroundcolour' => '#8ec760',
         ],
+        'highlight'            => [
+            'textcolour'       => '#ffffff',
+            'backgroundcolour' => '#8ec760',
+        ],
     ],
-    
+
     'events' => [
         'site'         => function ($event, $app) {
             $app->on('view.content', function ($event, $test) use ($app) {
-                
+
                 $module = App::module('spqr/cookiewarning');
                 $config = $module->config;
-                
+
                 $position   = (!empty($config['position']) ? $config['position']
                     : 'bottom');
                 $theme      = (!empty($config['theme']) ? $config['theme']
                     : 'classic');
+                $type       = (!empty($config['type']) ? $config['type']
+                    : 'info');
                 $url        = (!empty($config['url']) ? App::url($config['url'])
                     : '#');
                 $message    = (!empty($config['message']) ? $config['message']
                     : __('This website uses cookies. This ensures that the website is working correctly for your best experience on this website.'));
                 $dismiss    = (!empty($config['dismissbuttontext'])
                     ? $config['dismissbuttontext'] : __('Dismiss'));
+                $deny       = (!empty($config['denybuttontext'])
+                    ? $config['denybuttontext'] : __('Decline'));
+                $allow      = (!empty($config['allowbuttontext'])
+                    ? $config['allowbuttontext'] : __('Allow cookies'));
                 $policytext = (!empty($config['policytext'])
                     ? $config['policytext'] : __('Learn more'));
                 $buttontextcolour
@@ -70,38 +83,51 @@ return [
                 $buttonbackgroundcolour
                             = (!empty($config['button']['backgroundcolour'])
                     ? $config['button']['backgroundcolour'] : '#8ec760');
+                $highlighttextcolour
+                            = (!empty($config['highlight']['textcolour'])
+                    ? $config['highlight']['textcolour'] : '#ffffff');
+                $highlightbackgroundcolour
+                            = (!empty($config['highlight']['backgroundcolour'])
+                        ? $config['highlight']['backgroundcolour'] : '#8ec760');
                 $popuptextcolour
                             = (!empty($config['popup']['textcolour'])
                     ? $config['popup']['textcolour'] : '#404040');
-                
+
                 $popupbackgroundcolour
                     = (!empty($config['popup']['backgroundcolour'])
                     ? $config['popup']['backgroundcolour'] : '#efefef');
-                
-                
+
+
                 $script
                     = "window.addEventListener('load', function(){
 								window.cookieconsent.initialise({
-	                                'palette': {
-	                                    'popup': {
-		                                    'background': '$popupbackgroundcolour',
-		                                    'text': '$popuptextcolour'
-	                                    },
-									    'button': {
-											'background': '$buttonbackgroundcolour',
-										    'text': '$buttontextcolour'
-									    }
-	                                },
-	                                'theme': '$theme',
-                                    'position': '$position',
-                                    'content': {
-                                        'message': '$message',
-                                        'dismiss': '$dismiss',
-                                        'link': '$policytext',
-                                        'href': '$url'                                                                                
+	                    'palette': {
+	                       'popup': {
+		                         'background': '$popupbackgroundcolour',
+		                         'text': '$popuptextcolour'
+	                       },
+									       'button': {
+											       'background': '$buttonbackgroundcolour',
+										         'text': '$buttontextcolour'
+									       },
+                         'highlight': {
+											       'background': '$highlightbackgroundcolour',
+										         'text': '$highlighttextcolour'
+									       }
+	                    },
+	                       'theme': '$theme',
+                         'type': '$type',
+                         'position': '$position',
+                         'content': {
+                         'message': '$message',
+                         'dismiss': '$dismiss',
+                         'deny': '$deny',
+                         'allow': '$allow',
+                         'link': '$policytext',
+                         'href': '$url'
                                     }
 								})});";
-                
+
                 $app['styles']->add('cookieconsent',
                     'spqr/cookiewarning:app/assets/cookieconsent/cookieconsent.min.css');
                 $app['scripts']->add('cookieconsent',

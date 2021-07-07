@@ -23,6 +23,16 @@
             </div>
         </div>
         <div class="uk-form-row">
+            <label for="form-theme" class="uk-form-label">{{ 'Type' | trans }}</label>
+            <div class="uk-form-controls">
+                <select id="form-theme" class="uk-form-width-medium" v-model="package.config.type">
+                    <option value="info">{{ 'Info' | trans }}</option>
+                    <option value="opt-out">{{ 'Opt-Out' | trans }}</option>
+                    <option value="opt-in">{{ 'Opt-In' | trans }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="uk-form-row">
             <label class="uk-form-label">{{ 'Popup-Background-Colour' | trans }}</label>
             <div class="uk-form-controls uk-form-controls-text">
                 <p class="uk-form-controls-condensed">
@@ -55,6 +65,22 @@
             </div>
         </div>
         <div class="uk-form-row">
+            <label class="uk-form-label">{{ 'Highlight-Background-Colour' | trans }}</label>
+            <div class="uk-form-controls uk-form-controls-text">
+                <p class="uk-form-controls-condensed">
+                    <input type="text" class="uk-form-width-medium" placeholder="#000000" v-model="package.config.highlight.backgroundcolour">
+                </p>
+            </div>
+        </div>
+        <div class="uk-form-row">
+            <label class="uk-form-label">{{ 'Highlight-Text-Colour' | trans }}</label>
+            <div class="uk-form-controls uk-form-controls-text">
+                <p class="uk-form-controls-condensed">
+                    <input type="text" class="uk-form-width-medium" placeholder="#000000" v-model="package.config.highlight.textcolour">
+                </p>
+            </div>
+        </div>
+        <div class="uk-form-row">
             <label class="uk-form-label">{{ 'Message' | trans }}</label>
             <div class="uk-form-controls uk-form-controls-text">
                 <p class="uk-form-controls-condensed">
@@ -67,6 +93,22 @@
             <div class="uk-form-controls uk-form-controls-text">
                 <p class="uk-form-controls-condensed">
                     <input type="text" class="uk-form-width-medium" placeholder="{{ 'Overwrite dismiss-button' | trans }}"v-model="package.config.dismissbuttontext">
+                </p>
+            </div>
+        </div>
+        <div class="uk-form-row">
+            <label class="uk-form-label">{{ 'Deny-Button-Text' | trans }}</label>
+            <div class="uk-form-controls uk-form-controls-text">
+                <p class="uk-form-controls-condensed">
+                    <input type="text" class="uk-form-width-medium" placeholder="{{ 'Overwrite deny-button' | trans }}"v-model="package.config.denybuttontext">
+                </p>
+            </div>
+        </div>
+        <div class="uk-form-row">
+            <label class="uk-form-label">{{ 'Allow-Button-Text' | trans }}</label>
+            <div class="uk-form-controls uk-form-controls-text">
+                <p class="uk-form-controls-condensed">
+                    <input type="text" class="uk-form-width-medium" placeholder="{{ 'Overwrite allow-button' | trans }}"v-model="package.config.allowbuttontext">
                 </p>
             </div>
         </div>
